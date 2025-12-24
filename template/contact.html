@@ -1,0 +1,89 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}Contact Us | HEER{% endblock %}
+
+{% block body %}
+
+<!-- Hero Section -->
+<section style="background-color:#f8f8f8; padding:60px 0; text-align:center;">
+  <div style="max-width:1100px; margin:auto;">
+    <h1 style="font-size:48px; margin-bottom:10px;">
+      Contact <span style="color:#b49154;">HEER</span>
+    </h1>
+    <p style="font-size:18px; color:#777;">
+      We’d love to hear from you
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section style="padding:60px 0;">
+  <div style="max-width:1100px; margin:auto;">
+    <div style="display:flex; flex-wrap:wrap; gap:40px;">
+
+      <!-- Contact Info -->
+      <div style="flex:1; min-width:280px;">
+        <h3 style="margin-bottom:15px;">Get in Touch</h3>
+        <p style="color:#777; margin-bottom:25px;">
+          Visit us at our boutique or reach out for inquiries, orders, or collaborations.
+        </p>
+
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li style="margin-bottom:20px;">
+            📍 <strong>Address:</strong><br>
+            City Market, Hyderabad, Pakistan
+          </li>
+          <li style="margin-bottom:20px;">
+            📞 <strong>Phone:</strong><br>
+            +92 312 3456222
+          </li>
+          <li style="margin-bottom:20px;">
+            ✉️ <strong>Email:</strong><br>
+            info@heerfashion.pk
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <div style="flex:1; min-width:300px;">
+        <div style="border:1px solid #eee; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+          <div style="padding:30px;">
+            <h4 style="margin-bottom:25px;">Send Us a Message</h4>
+
+            <form method="post">
+              {% csrf_token %}
+
+              <div style="margin-bottom:20px;">
+                <label style="display:block; margin-bottom:5px;">Full Name</label>
+                <input type="text" name="name" placeholder="Your Name" required
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+              </div>
+
+              <div style="margin-bottom:20px;">
+                <label style="display:block; margin-bottom:5px;">Email Address</label>
+                <input type="email" name="email" placeholder="your@email.com" required
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+              </div>
+
+              <div style="margin-bottom:25px;">
+                <label style="display:block; margin-bottom:5px;">Message</label>
+                <textarea name="message" rows="5" placeholder="Write your message..." required
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;"></textarea>
+              </div>
+
+              <button type="submit"
+                style="background-color:#000; color:#fff; padding:10px 25px; border:none; border-radius:4px; cursor:pointer;">
+                Send Message
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

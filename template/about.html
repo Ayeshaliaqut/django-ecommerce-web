@@ -1,8 +1,98 @@
 {% extends "index.html" %}
+{% load static %}
 
-{% block title %}about{% endblock %}
+{% block title %}About Us | HEER{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Home Page!</h1>
-<p>This is dynamic content inserted into the base template.</p>
+<!-- Custom CSS -->
+<style>
+  #mission-images img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  #mission-images img:hover {
+    transform: scale(1.05);
+  }
+
+  #mission-images {
+    justify-content: center;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="text-center py-5" style="background-color: #f8f8f8;">
+  <div class="container">
+    <h1 class="display-4 mb-3">About <span style="color:#b49154;">HEER</span></h1>
+    <p class="lead text-muted">Where timeless tradition meets modern elegance.</p>
+  </div>
+</section>
+
+<!-- Brand Story -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'images/about1.webp' %}" class="img-fluid rounded shadow-lg" alt="HEER Boutique">
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-3">Our Story</h2>
+        <p style="text-align: justify;">
+          Founded in the heart of <strong>Hyderabad, Pakistan</strong>, <strong>HEER</strong> began as a vision to celebrate the grace and strength of women through fashion.
+          Each collection is a blend of artistry, cultural heritage, and modern sophistication — designed to make every woman feel confident and radiant.
+        </p>
+        <p style="text-align: justify;">
+          From our humble beginnings in <strong>City Market</strong>, HEER has become synonymous with quality craftsmanship and timeless aesthetics.
+          Every outfit reflects our commitment to elegance, detail, and authenticity.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Values -->
+<section class="py-5 text-center" style="background-color:#fff7f0;">
+  <div class="container">
+    <h2 class="mb-4">Our Mission & Values</h2>
+    <p class="w-75 mx-auto text-muted mb-5" style="font-size:1.1rem;">
+      At <strong>HEER</strong>, our mission is to design apparel that empowers women while honoring cultural artistry.
+      Every piece tells a story of passion, precision, and purpose.
+    </p>
+
+    <!-- Icons Section -->
+    <div class="row mb-5">
+      <div class="col-md-4 mb-3">
+        <i class="fas fa-leaf fa-3x mb-3 text-muted"></i>
+        <h5>Authenticity</h5>
+        <p class="text-muted">Rooted in culture, designed for the modern woman.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <i class="fas fa-heart fa-3x mb-3 text-muted"></i>
+        <h5>Elegance</h5>
+        <p class="text-muted">Refined silhouettes and intricate craftsmanship.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <i class="fas fa-handshake fa-3x mb-3 text-muted"></i>
+        <h5>Commitment</h5>
+        <p class="text-muted">Dedicated to quality and long-lasting trust.</p>
+      </div>
+    </div>
+
+    <!-- Aligned Images -->
+    <div class="row align-items-stretch text-center" id="mission-images">
+      <div class="col-md-4 mb-3">
+        <img src="{% static 'images/about3.webp' %}" class="img-fluid rounded shadow-sm w-100" alt="Mission Image 1">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="{% static 'images/about2.jfif' %}" class="img-fluid rounded shadow-sm w-100" alt="Mission Image 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="{% static 'images/about4.jfif' %}" class="img-fluid rounded shadow-sm w-100" alt="Mission Image 3">
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
