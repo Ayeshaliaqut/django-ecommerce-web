@@ -58,28 +58,27 @@ django/
 venv\Scripts\activate
 
 # run migrations
+```
 python manage.py migrate
+```
 
 # start server
+```
 python manage.py runserver
-
-
-Visit:
-
-http://127.0.0.1:8000/
+```
 
 📸 Static Files
 
 All images are stored in:
-
+```
 static/images/
-
+```
 
 Use in templates:
-
+```
 {% load static %}
 <img src="{% static 'images/example.webp' %}">
-
+```
 📬 Contact Form
 
 Stores messages in database
