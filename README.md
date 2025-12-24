@@ -30,7 +30,7 @@ Database: SQLite3
 Python: 3.11
 
 Version Control: Git
-
+```
 📁 Project Structure
 django/
 │── home/
@@ -52,7 +52,7 @@ django/
 │   └── urls.py
 │
 │── manage.py
-
+```
 🚀 How to Run Locally
 # activate virtual environment
 venv\Scripts\activate
